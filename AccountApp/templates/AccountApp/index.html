@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" type="text/css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to user account</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username:</label>
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                {{form.password}}
+            </div>
+            {{ form.non_field_errors }}
+        <div class="register-link">
+        {% if user.is_authenticated %}
+          <p> عملیات لاگین با موفقیت انجام شد</p>
+        {% else %}
+          <input type="submit" value="Login">
+          <div class="register-link">
+            <p>Don't have an account?&nbsp;<a href="#">Registration</a></p>
+          </div>
+        {% endif %}
+        </div>
+        </form>
+    </div>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>

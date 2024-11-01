@@ -1,0 +1,91 @@
+body {
+    font-family: 'Vazir', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/assets/images/background.jpg'); /* تصویر پس زمینه */
+    background-size: cover;
+    background-position: center;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #333;
+    align-self: flex-start;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-container input[type="submit"] {
+    padding: 12px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #e0b800;
+}
+
+.forgot-password,
+.register-link {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.forgot-password a,
+.register-link a {
+    color: #555;
+    text-decoration: none;
+}
+
+.forgot-password a:hover,
+.register-link a:hover {
+    text-decoration: underline;
+}
